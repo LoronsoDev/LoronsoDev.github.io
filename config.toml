@@ -1,3 +1,4 @@
+baseURL = 'https://loronsodev.github.io'
 title = 'Lorenzo Herran portfolio'
 baseurl = "/"
 languageCode = "es-es"
