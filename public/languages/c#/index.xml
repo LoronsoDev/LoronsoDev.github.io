@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>C# on Lorenzo HS</title>
+    <link>https://loronsodev.github.io/languages/c#/</link>
+    <description>Recent content in C# on Lorenzo HS</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://loronsodev.github.io/languages/c#/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>G!RO</title>
+      <link>https://loronsodev.github.io/projects/gro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://loronsodev.github.io/projects/gro/</guid>
+      <description>Lorem ipsum dolor sit amet # Lorem ipsum dolor sit amet, consectetur adipiscing elit.</description>
+    </item>
+    
+  </channel>
+</rss>

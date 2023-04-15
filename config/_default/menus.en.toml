@@ -14,11 +14,32 @@
   name = "Projects"
   pageRef = "projects"
   weight = 10
-  pre = 'star'
 
-#[[main]]
-#  name = "Parent"
-#  weight = 20
+  [[main]]
+  name="|| "
+  weight = 15
+
+[[main]]
+  identifier = "mail"
+  pre = "email"
+  url = "mailto: lorenzohs98@gmail.com"
+  weight = 20
+
+[[main]]
+  identifier = "git"
+  pre = "github"
+  weight = 30
+  url = "https://github.com/LoronsoDev"
+
+[[main]]
+  pre = "telegram"
+  name=""
+  weight = 40
+  telegram = "https://t.me/Loronso"
+
+  [[main]]
+  name=" ||"
+  weight = 50
 
 #[[main]]
 #  name = "example sub-menu 1"

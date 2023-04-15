@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Lorenzo HS portfolio</title>
+    <title>Lorenzo HS</title>
     <link>https://loronsodev.github.io/</link>
-    <description>Recent content on Lorenzo HS portfolio</description>
+    <description>Recent content on Lorenzo HS</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language><atom:link href="https://loronsodev.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title></title>
-      <link>https://loronsodev.github.io/first_post/</link>
+      <title>G!RO</title>
+      <link>https://loronsodev.github.io/projects/gro/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://loronsodev.github.io/first_post/</guid>
-      <description>probando</description>
-      
+      <guid>https://loronsodev.github.io/projects/gro/</guid>
+      <description>Lorem ipsum dolor sit amet # Lorem ipsum dolor sit amet, consectetur adipiscing elit.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://loronsodev.github.io/projects/gro/featured.jpg" />
     </item>
     
     <item>
-      <title></title>
-      <link>https://loronsodev.github.io/projects/laleche-v1/test/</link>
+      <title>Unnamed Game Engine</title>
+      <link>https://loronsodev.github.io/projects/test/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://loronsodev.github.io/projects/laleche-v1/test/</guid>
-      <description>xdjj</description>
-      
+      <guid>https://loronsodev.github.io/projects/test/</guid>
+      <description>What is this engine?</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://loronsodev.github.io/projects/test/featured.jpg" />
     </item>
     
   </channel>
