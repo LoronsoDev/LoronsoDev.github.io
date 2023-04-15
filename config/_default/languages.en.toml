@@ -6,7 +6,7 @@ weight = 1
 rtl = false
 
 title = "Lorenzo HS"
-logo = "assets/img/logo.png"
+logo = "./img/logo.png"
 # description = "My awesome website"
 # copyright = "Copy, _right?_ :thinking_face:"
 
