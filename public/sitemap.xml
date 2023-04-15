@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+    
+      <url>
+            <loc>https://loronsodev.github.io/</loc>
+            <priority>0</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://loronsodev.github.io/first_post/</loc>
+            <priority>0</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://loronsodev.github.io/projects/laleche-v1/</loc>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://loronsodev.github.io/projects/laleche-v1/test/</loc>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://loronsodev.github.io/projects/</loc>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+  
+    
+  
+</urlset>
