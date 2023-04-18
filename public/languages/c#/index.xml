@@ -5,14 +5,24 @@
     <link>https://loronsodev.github.io/languages/c#/</link>
     <description>Recent content in C# on Lorenzo HS</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://loronsodev.github.io/languages/c#/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Thu, 01 Jan 1970 01:01:40 +0100</lastBuildDate><atom:link href="https://loronsodev.github.io/languages/c#/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>G!RO</title>
       <link>https://loronsodev.github.io/projects/gro/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 01 Jan 1970 01:01:40 +0100</pubDate>
       
       <guid>https://loronsodev.github.io/projects/gro/</guid>
-      <description>Lorem ipsum dolor sit amet # Lorem ipsum dolor sit amet, consectetur adipiscing elit.</description>
+      <description>What is G!</description>
+    </item>
+    
+    <item>
+      <title>FADE</title>
+      <link>https://loronsodev.github.io/projects/fade/</link>
+      <pubDate>Thu, 01 Jan 1970 01:00:20 +0100</pubDate>
+      
+      <guid>https://loronsodev.github.io/projects/fade/</guid>
+      <description>What is FADE?</description>
     </item>
     
   </channel>

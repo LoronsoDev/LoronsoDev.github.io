@@ -5,6 +5,7 @@
     
       <url>
             <loc>https://loronsodev.github.io/</loc>
+            <lastmod>1970-01-01T01:01:40+01:00</lastmod>
             <priority>0</priority>
           </url>
     
@@ -14,21 +15,12 @@
     
   
     
-  
-    
-  
-    
-  
-    
-  
-    
       <url>
             <loc>https://loronsodev.github.io/projects/gro/</loc>
+            <lastmod>1970-01-01T01:01:40+01:00</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
-    
-  
     
   
     
@@ -38,9 +30,14 @@
     
       <url>
             <loc>https://loronsodev.github.io/projects/</loc>
+            <lastmod>1970-01-01T01:01:40+01:00</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
+    
+  
+    
+  
     
   
     
@@ -53,10 +50,28 @@
   
     
       <url>
-            <loc>https://loronsodev.github.io/projects/test/</loc>
+            <loc>https://loronsodev.github.io/projects/engine/</loc>
+            <lastmod>1970-01-01T01:00:50+01:00</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
+    
+  
+    
+      <url>
+            <loc>https://loronsodev.github.io/projects/fade/</loc>
+            <lastmod>1970-01-01T01:00:20+01:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+  
     
   
 </urlset>

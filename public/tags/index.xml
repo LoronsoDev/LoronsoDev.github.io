@@ -5,13 +5,23 @@
     <link>https://loronsodev.github.io/tags/</link>
     <description>Recent content in Tags on Lorenzo HS</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="https://loronsodev.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Thu, 01 Jan 1970 01:01:40 +0100</lastBuildDate><atom:link href="https://loronsodev.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Personal project</title>
       <link>https://loronsodev.github.io/tags/personal-project/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 01 Jan 1970 01:01:40 +0100</pubDate>
       
       <guid>https://loronsodev.github.io/tags/personal-project/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Game Jam</title>
+      <link>https://loronsodev.github.io/tags/game-jam/</link>
+      <pubDate>Thu, 01 Jan 1970 01:00:20 +0100</pubDate>
+      
+      <guid>https://loronsodev.github.io/tags/game-jam/</guid>
       <description></description>
     </item>
     
