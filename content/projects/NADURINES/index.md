@@ -23,7 +23,7 @@ This game is playable on [Google Play](https://play.google.com/store/apps/detail
 Android
 {{< /button >}}
 <span>-</span>
-{{< button href="apps.apple.com/us/app/nadurines/id1490410955" target="_blank" >}}
+{{< button href="https://apps.apple.com/us/app/nadurines/id1490410955" target="_blank" >}}
 iOS
 {{< /button >}}
 
