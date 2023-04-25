@@ -19,11 +19,11 @@ This game is playable on [Google Play](https://play.google.com/store/apps/detail
 
 <span></span>
 
-<b>Try this game!</b> {{< button href="https://negone.itch.io/giro" target="_blank" >}}
+<b>Try this game!</b> {{< button href="https://play.google.com/store/apps/details?id=com.sorpresasdivertidas.nadurines&hl=es&gl=US" target="_blank" >}}
 Android
 {{< /button >}}
 <span>-</span>
-{{< button href="https://negone.itch.io/giro" target="_blank" >}}
+{{< button href="apps.apple.com/us/app/nadurines/id1490410955" target="_blank" >}}
 iOS
 {{< /button >}}
 
