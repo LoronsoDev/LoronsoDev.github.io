@@ -15,10 +15,6 @@
   pageRef = "projects"
   weight = 10
 
-  [[main]]
-  name="|| "
-  weight = 15
-
 [[main]]
   identifier = "mail"
   pre = "email"
@@ -32,14 +28,10 @@
   url = "https://github.com/LoronsoDev"
 
 [[main]]
+  identifier = "telegram"
   pre = "telegram"
-  name=""
   weight = 40
-  telegram = "https://t.me/Loronso"
-
-  [[main]]
-  name=" ||"
-  weight = 50
+  url = "https://t.me/Loronso"
 
 #[[main]]
 #  name = "example sub-menu 1"

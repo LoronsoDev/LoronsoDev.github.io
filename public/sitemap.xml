@@ -41,6 +41,15 @@
     
   
     
+      <url>
+            <loc>https://loronsodev.github.io/projects/nadurines/</loc>
+            <lastmod>1970-01-01T01:01:35+01:00</lastmod>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
   
     
   
@@ -50,11 +59,13 @@
   
     
       <url>
-            <loc>https://loronsodev.github.io/projects/engine/</loc>
+            <loc>https://loronsodev.github.io/projects/engine-sdl/</loc>
             <lastmod>1970-01-01T01:00:50+01:00</lastmod>
             <changefreq>daily</changefreq>
             <priority>0.5</priority>
           </url>
+    
+  
     
   
     

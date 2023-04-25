@@ -1,4 +1,5 @@
 *"Everything should be made as simple as possible, but not simpler"*
+
 {{< typeit 
   tag=h2
   speed=100

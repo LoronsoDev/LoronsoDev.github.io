@@ -11,6 +11,18 @@ draft: false
 
 {{< youtube si6tVLTcYVo >}}
 
+<span></span>
+
+{{< alert icon="download">}}
+This game is playable on [itch.io](https://negone.itch.io/giro)
+{{< /alert >}}
+
+<span></span>
+
+{{< button href="https://negone.itch.io/giro" target="_blank" >}}
+Try this game!
+{{< /button >}}
+
 ## What is G!RO?
 As last year students, some of my classmates and I decided to create small, addictive mobile games so we could iterate easily and test different concepts. We tried several prototypes with the idea of having only the "tapping" input available. G!RO is the result of one of those prototypes.
 

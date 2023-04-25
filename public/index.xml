@@ -13,18 +13,28 @@
       <pubDate>Thu, 01 Jan 1970 01:01:40 +0100</pubDate>
       
       <guid>https://loronsodev.github.io/projects/gro/</guid>
-      <description>What is G!</description>
+      <description>This game is playable on itch.</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://loronsodev.github.io/projects/gro/featured.png" />
     </item>
     
     <item>
-      <title>Unnamed Game Engine</title>
-      <link>https://loronsodev.github.io/projects/engine/</link>
+      <title>Nadurines</title>
+      <link>https://loronsodev.github.io/projects/nadurines/</link>
+      <pubDate>Thu, 01 Jan 1970 01:01:35 +0100</pubDate>
+      
+      <guid>https://loronsodev.github.io/projects/nadurines/</guid>
+      <description>This game is playable on Google Play and App StoreTry this game!</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://loronsodev.github.io/projects/nadurines/featured.png" />
+    </item>
+    
+    <item>
+      <title>My first (unnamed) Game Engine</title>
+      <link>https://loronsodev.github.io/projects/engine-sdl/</link>
       <pubDate>Thu, 01 Jan 1970 01:00:50 +0100</pubDate>
       
-      <guid>https://loronsodev.github.io/projects/engine/</guid>
+      <guid>https://loronsodev.github.io/projects/engine-sdl/</guid>
       <description>What is this engine?</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://loronsodev.github.io/projects/engine/featured.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://loronsodev.github.io/projects/engine-sdl/featured.jpg" />
     </item>
     
     <item>
@@ -33,7 +43,7 @@
       <pubDate>Thu, 01 Jan 1970 01:00:20 +0100</pubDate>
       
       <guid>https://loronsodev.github.io/projects/fade/</guid>
-      <description>What is FADE?</description>
+      <description>This game is playable on itch.</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://loronsodev.github.io/projects/fade/featured.jpg" />
     </item>
     

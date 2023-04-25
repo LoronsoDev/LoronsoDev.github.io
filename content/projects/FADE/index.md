@@ -8,8 +8,19 @@ engines: ["Unity"]
 draft: false
 ---
 
-{{< youtube mRA8XhR5a6M >}}
+{{< youtube bVkNuHMnH5M >}}
 
+<span></span>
+
+{{< alert icon="download">}}
+This game is playable on [itch.io](https://loronso.itch.io/fade)
+{{< /alert >}}
+
+<span></span>
+
+{{< button href="https://loronso.itch.io/fade" target="_blank" >}}
+Try this game!
+{{< /button >}}
 ## What is FADE?
 FADE was a video game created in 4 days as part of Telefonica's hackathon "HackForGood". The goal of the event was to create pieces of software that could be used for the greater good, in any way.
 
