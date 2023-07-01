@@ -16,5 +16,14 @@
       <description>This game is playable on Google Play and App StoreTry this game!</description>
     </item>
     
+    <item>
+      <title>Pre trip Inspection (US CDL)</title>
+      <link>https://loronsodev.github.io/projects/pre-trip-inspection-us-cdl/</link>
+      <pubDate>Thu, 01 Jan 1970 01:00:40 +0100</pubDate>
+      
+      <guid>https://loronsodev.github.io/projects/pre-trip-inspection-us-cdl/</guid>
+      <description>This project is property of Isostopy, SL.</description>
+    </item>
+    
   </channel>
 </rss>

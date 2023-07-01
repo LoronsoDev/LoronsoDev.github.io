@@ -1,7 +1,7 @@
 ---
 title: "Galaxy Forces"
 tags: ["Personal project"]
-date: 20
+date: 45
 languages: ["C#"]
 engines: ["Unity"]
 #showSummary: true

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VR on Lorenzo HS</title>
+    <link>https://loronsodev.github.io/tags/vr/</link>
+    <description>Recent content in VR on Lorenzo HS</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 01 Jan 1970 01:01:39 +0100</lastBuildDate><atom:link href="https://loronsodev.github.io/tags/vr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Alien Agent</title>
+      <link>https://loronsodev.github.io/projects/vr-inside-vr-adventure/</link>
+      <pubDate>Thu, 01 Jan 1970 01:01:39 +0100</pubDate>
+      
+      <guid>https://loronsodev.github.io/projects/vr-inside-vr-adventure/</guid>
+      <description>This game is made for Pico 4 VR headsets using the OpenXR standardWhat is Alien Agent?</description>
+    </item>
+    
+    <item>
+      <title>Pre trip Inspection (US CDL)</title>
+      <link>https://loronsodev.github.io/projects/pre-trip-inspection-us-cdl/</link>
+      <pubDate>Thu, 01 Jan 1970 01:00:40 +0100</pubDate>
+      
+      <guid>https://loronsodev.github.io/projects/pre-trip-inspection-us-cdl/</guid>
+      <description>This project is property of Isostopy, SL.</description>
+    </item>
+    
+  </channel>
+</rss>
