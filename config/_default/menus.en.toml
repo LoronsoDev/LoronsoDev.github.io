@@ -33,6 +33,13 @@
   weight = 40
   url = "https://t.me/Loronso"
 
+[[main]]
+  identifier = "linkedin"
+  pre = "linkedin"
+  weight = 45
+  url = "https://www.linkedin.com/in/lorenzohs/"
+
+
 #[[main]]
 #  name = "example sub-menu 1"
 #  parent = "Parent"
