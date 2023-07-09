@@ -112,13 +112,13 @@ defaultBackgroundImage = "img/fluid.png" # used as default for background images
   cardViewScreenWidth = false
 
 [firebase]
-  # apiKey = "XXXXXX"
-  # authDomain = "XXXXXX"
-  # projectId = "XXXXXX"
-  # storageBucket = "XXXXXX"
-  # messagingSenderId = "XXXXXX"
-  # appId = "XXXXXX"
-  # measurementId = "XXXXXX"
+  apiKey = "AIzaSyA-2WGrAdW3_NRs1UUEwhfWs7TOFH2dctE"
+  authDomain = "portfolio-5efa7.firebaseapp.com"
+  projectId = "portfolio-5efa7"
+  storageBucket = "portfolio-5efa7.appspot.com"
+  messagingSenderId = "1039552664101"
+  appId = "1:1039552664101:web:15216f1c5bf93d6c89a5cc"
+  measurementId = "G-QFGVNQGQTW"
 
 [fathomAnalytics]
   # site = "ABC12345"

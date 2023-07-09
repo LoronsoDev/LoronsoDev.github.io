@@ -151,6 +151,29 @@
   <meta name="theme-color"/>
   
   
+  
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script>
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyA-2WGrAdW3_NRs1UUEwhfWs7TOFH2dctE",
+      authDomain: "AIzaSyA-2WGrAdW3_NRs1UUEwhfWs7TOFH2dctE",
+      projectId: "portfolio-5efa7",
+      storageBucket: "portfolio-5efa7.appspot.com",
+      messagingSenderId: "1039552664101",
+      appId: "1:1039552664101:web:15216f1c5bf93d6c89a5cc",
+      measurementId: "G-QFGVNQGQTW"
+    };
+
+    var app = firebase.initializeApp(firebaseConfig);
+    var db = firebase.firestore();
+    var auth = firebase.auth();
+
+  </script>
+  
+  
 </head>
 <body
   class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32">
@@ -654,11 +677,11 @@
                     </div>
                     <section class="prose dark:prose-invert"><p><em>&ldquo;Everything should be made as simple as possible, but not simpler&rdquo;</em></p>
 
-<h2 id="typeit-1688292411034799800"></h2>
+<h2 id="typeit-1688901422852329400"></h2>
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-      new TypeIt("#typeit-1688292411034799800", {
+      new TypeIt("#typeit-1688901422852329400", {
         strings: ["\r","\r"," C++\r"," C#\r"," Unity\r"," Unreal Engine\r"," Python\r"," Game Development\r"," Simulations\r"," OpenGL\r"," Vulkan\r"," Game Engine Development\r"," Software Engineering\r"," Computer Graphics\r","\r",""],
         speed:  100 ,
         lifeLike:  false ,
