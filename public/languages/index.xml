@@ -6,7 +6,25 @@
     <description>Recent content in Languages on Lorenzo HS</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 01 Jan 1970 01:01:40 +0100</lastBuildDate><atom:link href="https://loronsodev.github.io/languages/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Jan 1970 01:01:41 +0100</lastBuildDate><atom:link href="https://loronsodev.github.io/languages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Blueprints</title>
+      <link>https://loronsodev.github.io/languages/blueprints/</link>
+      <pubDate>Thu, 01 Jan 1970 01:01:41 +0100</pubDate>
+      
+      <guid>https://loronsodev.github.io/languages/blueprints/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>UE Materials</title>
+      <link>https://loronsodev.github.io/languages/ue-materials/</link>
+      <pubDate>Thu, 01 Jan 1970 01:01:41 +0100</pubDate>
+      
+      <guid>https://loronsodev.github.io/languages/ue-materials/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>C#</title>
       <link>https://loronsodev.github.io/languages/c#/</link>

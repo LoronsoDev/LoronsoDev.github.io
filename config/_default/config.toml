@@ -17,6 +17,8 @@ buildFuture = false
 
 googleAnalytics = "G-QFGVNQGQTW"
 
+disqusShortname = 'LoronsoDev'
+
 [imaging]
   anchor = 'Center'
 

@@ -6,7 +6,16 @@
     <description>Recent content in Tags on Lorenzo HS</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 01 Jan 1970 01:01:40 +0100</lastBuildDate><atom:link href="https://loronsodev.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 01 Jan 1970 01:01:41 +0100</lastBuildDate><atom:link href="https://loronsodev.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tutorial</title>
+      <link>https://loronsodev.github.io/tags/tutorial/</link>
+      <pubDate>Thu, 01 Jan 1970 01:01:41 +0100</pubDate>
+      
+      <guid>https://loronsodev.github.io/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Personal project</title>
       <link>https://loronsodev.github.io/tags/personal-project/</link>
@@ -31,15 +40,6 @@
       <pubDate>Thu, 01 Jan 1970 01:01:35 +0100</pubDate>
       
       <guid>https://loronsodev.github.io/tags/professional-project/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tutorial</title>
-      <link>https://loronsodev.github.io/tags/tutorial/</link>
-      <pubDate>Thu, 01 Jan 1970 01:00:50 +0100</pubDate>
-      
-      <guid>https://loronsodev.github.io/tags/tutorial/</guid>
       <description></description>
     </item>
     

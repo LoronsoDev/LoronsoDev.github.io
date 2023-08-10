@@ -1,0 +1,2211 @@
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth" data-default-appearance="dark"
+  data-auto-appearance="false"><head>
+  <meta charset="utf-8" />
+  
+  <meta http-equiv="content-language" content="en" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <title>Creating optimized, convincing explosions for Unreal Engine 5 &middot; Lorenzo HS</title>
+  <meta name="title" content="Creating optimized, convincing explosions for Unreal Engine 5 &middot; Lorenzo HS" />
+  
+  
+  <meta name="keywords" content="Tutorial, " />
+  
+  
+  <link rel="canonical" href="https://loronsodev.github.io/posts/explosion-fx/" />
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.081da01623a4ddb10b87d725c54f53e4f10d9c3e20085b5475baaf3bbf2145ce57db53214ac364d50b8c734d3c74a48a804257bc3a2ad4a390db48582225966a.css"
+    integrity="sha512-CB2gFiOk3bELh9clxU9T5PENnD4gCFtUdbqvO78hRc5X21MhSsNk1QuMc008dKSKgEJXvDoq1KOQ20hYIiWWag==" />
+  
+  
+  <script type="text/javascript" src="/js/appearance.min.a75d508cf75a202afc48fe649516720f8036bda3657897f6cc07dab21f94fa9c3933edbbfc2936f8d3a426f45ac6153237a48aec9115147c5e03db1c5b62b8bc.js"
+    integrity="sha512-p11QjPdaICr8SP5klRZyD4A2vaNleJf2zAfash&#43;U&#43;pw5M&#43;27/Ck2&#43;NOkJvRaxhUyN6SK7JEVFHxeA9scW2K4vA=="></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.34dfb4e6b05b47b0a3599f50035f9bbb18c2d36a26aa4c0ea7acc4936489d4c2a55f65683d53e3c4215337e6a8c02e554881af2da86b5783c96837ae3d4e98f6.js"
+    integrity="sha512-NN&#43;05rBbR7CjWZ9QA1&#43;buxjC02omqkwOp6zEk2SJ1MKlX2VoPVPjxCFTN&#43;aowC5VSIGvLahrV4PJaDeuPU6Y9g==" data-copy="" data-copied=""></script>
+  
+  <script src="/js/zoom.min.js"></script>
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="Creating optimized, convincing explosions for Unreal Engine 5" />
+<meta property="og:description" content="What is a flipbook?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://loronsodev.github.io/posts/explosion-fx/" /><meta property="og:image" content="https://loronsodev.github.io/posts/explosion-fx/featured.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="1970-01-01T01:01:41+01:00" />
+<meta property="article:modified_time" content="1970-01-01T01:01:41+01:00" /><meta property="og:site_name" content="Lorenzo HS" />
+
+
+  <meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://loronsodev.github.io/posts/explosion-fx/featured.png"/>
+<meta name="twitter:title" content="Creating optimized, convincing explosions for Unreal Engine 5"/>
+<meta name="twitter:description" content="What is a flipbook?"/>
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "Creating optimized, convincing explosions for Unreal Engine 5",
+    "headline": "Creating optimized, convincing explosions for Unreal Engine 5",
+    
+    "abstract": "What is a flipbook?",
+    "inLanguage": "en",
+    "url" : "https:\/\/loronsodev.github.io\/posts\/explosion-fx\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Lorenzo HS"
+    },
+    "copyrightYear": "1970",
+    "dateCreated": "1970-01-01T01:01:41\u002b01:00",
+    "datePublished": "1970-01-01T01:01:41\u002b01:00",
+    
+    "dateModified": "1970-01-01T01:01:41\u002b01:00",
+    
+    "keywords": ["Tutorial"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "2333"
+  }]
+  </script>
+
+
+  
+  
+  <meta name="author" content="Lorenzo HS" />
+  
+  
+  
+  <link href="mailto:lorenzohs98@gmail.com" rel="me" />
+  
+  
+  <link href="https://github.com/LoronsoDev" rel="me" />
+  
+  
+  <link href="https://www.linkedin.com/in/lorenzohs/" rel="me" />
+  
+  
+  <link href="https://t.me/Loronso" rel="me" />
+  
+  
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.js" integrity=""></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QFGVNQGQTW"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-QFGVNQGQTW', { 'anonymize_ip': false });
+}
+</script>
+
+
+
+  
+  
+  <meta name="theme-color"/>
+  
+  
+  
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script>
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyA-2WGrAdW3_NRs1UUEwhfWs7TOFH2dctE",
+      authDomain: "AIzaSyA-2WGrAdW3_NRs1UUEwhfWs7TOFH2dctE",
+      projectId: "portfolio-5efa7",
+      storageBucket: "portfolio-5efa7.appspot.com",
+      messagingSenderId: "1039552664101",
+      appId: "1:1039552664101:web:15216f1c5bf93d6c89a5cc",
+      measurementId: "G-QFGVNQGQTW"
+    };
+
+    var app = firebase.initializeApp(firebaseConfig);
+    var db = firebase.firestore();
+    var auth = firebase.auth();
+
+  </script>
+  
+  
+</head>
+<body
+  class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32">
+  <div id="the-top" class="absolute flex self-center">
+    <a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+      href="#main-content"><span
+        class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400">&darr;</span>Skip to main content</a>
+  </div>
+  
+  
+  <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 pl-[24px] pr-[24px]" style="z-index:100">
+  <div id="menu-blur" class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom bg-neutral dark:bg-neutral-800"></div>
+  <div class="relative max-w-[64rem] ml-auto mr-auto">
+    <div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
+    class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start space-x-3">
+    
+    
+    
+    <div>
+        <a href="/" class="flex">
+            <span class="sr-only">Lorenzo HS</span>
+
+            <img src="/img/Logo.png" width="292" height="292"
+                class="max-h-[5rem] max-w-[5rem] object-scale-down object-left nozoom" alt="Lorenzo HS" />
+
+        </a>
+    </div>
+    
+    <div class="flex flex-1 items-center justify-between">
+        <nav class="flex space-x-3">
+
+            <a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900">Lorenzo HS</a>
+
+
+        </nav>
+        <nav class="hidden md:flex items-center space-x-5 md:ml-12">
+
+            
+            
+            
+  <a href="/projects/"  class="flex items-center">
+    
+    <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="Projects">
+        Projects
+    </p>
+</a>
+
+
+            
+            
+  <a href="/posts/"  class="flex items-center">
+    
+    <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="Posts">
+        Posts
+    </p>
+</a>
+
+
+            
+            
+  <a href="mailto:%20lorenzohs98@gmail.com"  class="flex items-center">
+    
+    <span >
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+
+  </span>
+
+
+    </span>
+    
+    <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="">
+        
+    </p>
+</a>
+
+
+            
+            
+  <a href="https://github.com/LoronsoDev"  target="_blank"  class="flex items-center">
+    
+    <span >
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+  </span>
+
+
+    </span>
+    
+    <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="">
+        
+    </p>
+</a>
+
+
+            
+            
+  <a href="https://t.me/Loronso"  target="_blank"  class="flex items-center">
+    
+    <span >
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M248,8C111.033,8,0,119.033,0,256S111.033,504,248,504,496,392.967,496,256,384.967,8,248,8ZM362.952,176.66c-3.732,39.215-19.881,134.378-28.1,178.3-3.476,18.584-10.322,24.816-16.948,25.425-14.4,1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25,5.342-39.5,3.652-3.793,67.107-61.51,68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608,69.142-14.845,10.194-26.894,9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7,18.45-13.7,108.446-47.248,144.628-62.3c68.872-28.647,83.183-33.623,92.511-33.789,2.052-.034,6.639.474,9.61,2.885a10.452,10.452,0,0,1,3.53,6.716A43.765,43.765,0,0,1,362.952,176.66Z"/></svg>
+
+  </span>
+
+
+    </span>
+    
+    <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="">
+        
+    </p>
+</a>
+
+
+            
+            
+  <a href="https://www.linkedin.com/in/lorenzohs/"  target="_blank"  class="flex items-center">
+    
+    <span >
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+
+  </span>
+
+
+    </span>
+    
+    <p class="text-base font-medium text-gray-500 hover:text-gray-900" title="">
+        
+    </p>
+</a>
+
+
+            
+            
+
+            
+
+
+            
+            <button id="search-button" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+
+            
+            
+            <div
+                class="ltr:mr-14 rtl:ml-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400">
+                <button id="appearance-switcher" aria-label="Dark mode switcher" type="button">
+                    <div class="flex items-center justify-center h-12 dark:hidden">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                    </div>
+                    <div class="items-center justify-center hidden h-12 dark:flex">
+                        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                    </div>
+                </button>
+            </div>
+            
+
+        </nav>
+        <div class="flex md:hidden items-center space-x-5 md:ml-12">
+
+            <span></span>
+
+            
+
+
+            
+            <button id="search-button-mobile" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+            
+            
+            <button id="appearance-switcher-mobile" aria-label="Dark mode switcher" type="button" style="margin-right:5px">
+                <div class="flex items-center justify-center h-12 dark:hidden">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+                </div>
+                <div class="items-center justify-center hidden h-12 dark:flex">
+                    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+                </div>
+            </button>
+            
+
+        </div>
+    </div>
+    <div class="-my-2 -mr-2 md:hidden">
+
+        <label id="menu-button" for="menu-controller" class="block">
+            <input type="checkbox" id="menu-controller" class="hidden" />
+            <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+                
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+
+  </span>
+
+
+            </div>
+            <div id="menu-wrapper" style="padding-top:5px;"
+                class="fixed inset-0 z-30 invisible w-screen h-screen m-auto overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50">
+                <ul
+                    class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl">
+
+                    <li>
+                        <span
+                            class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+</span>
+                    </li>
+
+                    
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/projects/"  class="flex items-center">
+        
+        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="Projects">
+            Projects
+        </p>
+    </a>
+</li>
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/posts/"  class="flex items-center">
+        
+        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="Posts">
+            Posts
+        </p>
+    </a>
+</li>
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="mailto:%20lorenzohs98@gmail.com"  class="flex items-center">
+        
+        <div >
+            
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+
+  </span>
+
+
+        </div>
+        
+        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="">
+            
+        </p>
+    </a>
+</li>
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="https://github.com/LoronsoDev"  target="_blank"  class="flex items-center">
+        
+        <div >
+            
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+  </span>
+
+
+        </div>
+        
+        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="">
+            
+        </p>
+    </a>
+</li>
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="https://t.me/Loronso"  target="_blank"  class="flex items-center">
+        
+        <div >
+            
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M248,8C111.033,8,0,119.033,0,256S111.033,504,248,504,496,392.967,496,256,384.967,8,248,8ZM362.952,176.66c-3.732,39.215-19.881,134.378-28.1,178.3-3.476,18.584-10.322,24.816-16.948,25.425-14.4,1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25,5.342-39.5,3.652-3.793,67.107-61.51,68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608,69.142-14.845,10.194-26.894,9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7,18.45-13.7,108.446-47.248,144.628-62.3c68.872-28.647,83.183-33.623,92.511-33.789,2.052-.034,6.639.474,9.61,2.885a10.452,10.452,0,0,1,3.53,6.716A43.765,43.765,0,0,1,362.952,176.66Z"/></svg>
+
+  </span>
+
+
+        </div>
+        
+        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="">
+            
+        </p>
+    </a>
+</li>
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="https://www.linkedin.com/in/lorenzohs/"  target="_blank"  class="flex items-center">
+        
+        <div >
+            
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+
+  </span>
+
+
+        </div>
+        
+        <p class="text-bg font-bg text-gray-500 hover:text-gray-900" title="">
+            
+        </p>
+    </a>
+</li>
+
+
+
+                    
+                    
+
+                </ul>
+                
+
+            </div>
+        </label>
+    </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+<script>
+  window.addEventListener('scroll', function (e) {
+    var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    var background_blur = document.getElementById('menu-blur');
+    background_blur.style.opacity = (scroll / 300);
+  });
+</script>
+
+  
+  <div class="relative flex flex-col grow">
+    <main id="main-content" class="grow">
+      
+
+
+<article>
+  
+    
+     
+    
+    
+      
+
+
+<div id="hero" class="h-[150px] md:h-[200px]"></div>
+
+
+    
+    <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
+    style="background-image:url(/posts/explosion-fx/featured_hu6ba669e679685277578a2627fbca6316_1327649_1200x0_resize_box_3.png);">
+    
+
+
+    <div class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal">
+    </div>
+    <div
+        class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal">
+    </div>
+</div>
+
+<div id="background-blur" class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl"></div>
+<script>
+    window.addEventListener('scroll', function (e) {
+        var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        var background_blur = document.getElementById('background-blur');
+        background_blur.style.opacity = (scroll / 300)
+    });
+</script>
+
+    
+  
+  
+  <header id="single_header" class="mt-5 max-w-prose">
+    
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+      Creating optimized, convincing explosions for Unreal Engine 5
+    </h1>
+    <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+
+  
+  
+</div>
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/engines/unreal-engine/&#34;,'_self');">
+    <span class="flex">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
+  >
+    Unreal Engine
+  </span>
+</span>
+
+  </span>
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/languages/blueprints/&#34;,'_self');">
+    <span class="flex">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
+  >
+    Blueprints
+  </span>
+</span>
+
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/languages/ue-materials/&#34;,'_self');">
+    <span class="flex">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
+  >
+    UE Materials
+  </span>
+</span>
+
+  </span>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/tutorial/&#34;,'_self');">
+    <span class="flex">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400"
+  >
+    Tutorial
+  </span>
+</span>
+
+  </span>
+  
+  
+  
+  
+</div>
+
+
+
+    </div>
+  </header>
+  <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+     
+    <div class="order-first sm:max-w-prose lg:ml-auto px-0 lg:order-last lg:max-w-xs ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky  lg:top-10 ">
+        <details open class="mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-a-flipbook">What is a flipbook?</a></li>
+    <li><a href="#but-isnt-that-extremely-performance-intensive">But isn&rsquo;t that extremely performance intensive?</a></li>
+    <li><a href="#optimizing-our-flipbooks">Optimizing our flipbooks</a>
+      <ul>
+        <li><a href="#motion-based-vectors">Motion-based vectors</a></li>
+        <li><a href="#baked-lighting-for-flipbooks-tlrb-textures">Baked lighting for flipbooks: TLRB textures</a></li>
+        <li><a href="#emissive-data">Emissive data</a></li>
+        <li><a href="#transparency-data">Transparency data</a></li>
+        <li><a href="#overview">Overview</a></li>
+      </ul>
+    </li>
+    <li><a href="#exporting-this-data">Exporting this data</a>
+      <ul>
+        <li><a href="#embergen">Embergen</a></li>
+        <li><a href="#houdini">Houdini</a></li>
+      </ul>
+    </li>
+    <li><a href="#using-this-inside-unreal-engine-5">Using this inside Unreal Engine 5</a></li>
+    <li><a href="#overview-1">Overview</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-a-flipbook">What is a flipbook?</a></li>
+    <li><a href="#but-isnt-that-extremely-performance-intensive">But isn&rsquo;t that extremely performance intensive?</a></li>
+    <li><a href="#optimizing-our-flipbooks">Optimizing our flipbooks</a>
+      <ul>
+        <li><a href="#motion-based-vectors">Motion-based vectors</a></li>
+        <li><a href="#baked-lighting-for-flipbooks-tlrb-textures">Baked lighting for flipbooks: TLRB textures</a></li>
+        <li><a href="#emissive-data">Emissive data</a></li>
+        <li><a href="#transparency-data">Transparency data</a></li>
+        <li><a href="#overview">Overview</a></li>
+      </ul>
+    </li>
+    <li><a href="#exporting-this-data">Exporting this data</a>
+      <ul>
+        <li><a href="#embergen">Embergen</a></li>
+        <li><a href="#houdini">Houdini</a></li>
+      </ul>
+    </li>
+    <li><a href="#using-this-inside-unreal-engine-5">Using this inside Unreal Engine 5</a></li>
+    <li><a href="#overview-1">Overview</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+      </div>
+      </div>
+      
+      <div class="min-w-0 min-h-0 max-w-prose">
+        
+
+        <div id="what-is-a-flipbook" class="anchor"></div>
+<h2 class="relative group">What is a flipbook? 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#what-is-a-flipbook" aria-label="Anchor">#</a></span>        
+    
+</h2>
+<p>When we use high-quality, hard to simulate effects in videogames, most of what you see is usually &ldquo;faked&rdquo; through the use of flipbooks. Through the use of a single texture, several frames of the simulation are laid next to each other, ready to be extracted by the developer once it&rsquo;s inside the game engine. Once ready, each frame is shown in the order they were simulated and laid in the flipbook, creating the illusion of being simulated in real-time. Due to the nature of this technique, this means that FX created using flipbooks are completely flat (2D). Game developer usually fake this by creating a billboard with this texture, which is nothing more than a texture that is constantly looking at the camera plane.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        srcset="
+        /posts/explosion-fx/flipbook_example_hu37af502f8bfab14bdb553b724cbe158a_197219_330x0_resize_box_3.png 330w,
+        /posts/explosion-fx/flipbook_example_hu37af502f8bfab14bdb553b724cbe158a_197219_660x0_resize_box_3.png 660w,
+        /posts/explosion-fx/flipbook_example_hu37af502f8bfab14bdb553b724cbe158a_197219_1024x0_resize_box_3.png 1024w,
+        /posts/explosion-fx/flipbook_example_hu37af502f8bfab14bdb553b724cbe158a_197219_1320x0_resize_box_3.png 2x"
+        src="/posts/explosion-fx/flipbook_example_hu37af502f8bfab14bdb553b724cbe158a_197219_660x0_resize_box_3.png"
+        alt="Flipbook example"
+      />
+      
+      
+    </figure>
+  
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><em>example of a flipbook</em></td>
+</tr>
+</tbody>
+</table>
+<div id="but-isnt-that-extremely-performance-intensive" class="anchor"></div>
+<h2 class="relative group">But isn&rsquo;t that extremely performance intensive? 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#but-isnt-that-extremely-performance-intensive" aria-label="Anchor">#</a></span>        
+    
+</h2>
+<p>It is indeed, and it&rsquo;s not only costly on the render side: it&rsquo;s also a problem with storage. High quality simulations tend to have lots of data, needing textures with a very high resolution in order to look convincing. Through this post we&rsquo;ll see a common technique of optimization, its results, and how to do it.</p>
+<div id="optimizing-our-flipbooks" class="anchor"></div>
+<h2 class="relative group">Optimizing our flipbooks 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#optimizing-our-flipbooks" aria-label="Anchor">#</a></span>        
+    
+</h2>
+<p>The most obvious way to optimize our flipbooks is through two ways: reducing the resolution of the flipbook and using the least textures possible. But this comes with a huge quality drawback, as any VFX based in flipbook usage has to share the resolution of the texture between all of the frames. So, for a 2048x2048 flipbook with 64 frames, laid in a square of 8 frames per row and column (8x8), we would only have <em>2048/8 = 256</em> pixels available for each frame. We can just go and add more resolution, but that would only lead us to a bigger problem.</p>
+<p>This is one the problems that <em>Mederic</em>, former VFX Tech Director of Skull &amp; Bones, found while trying to have convincing explosions. <a href="https://realtimevfx.com/t/smoke-lighting-and-texture-re-usability-in-skull-bones/5339"   target="_blank">
+    I&rsquo;m basing this post on his explanation of this problem on Real-Time VFX forums</a>.</p>
+<div id="motion-based-vectors" class="anchor"></div>
+<h3 class="relative group">Motion-based vectors 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#motion-based-vectors" aria-label="Anchor">#</a></span>        
+    
+</h3>
+<p>So what do we do then? We can&rsquo;t just go ahead and delete frames randomly. Even though it would work, and we would achieve a higher resolution per frame, the result would just be a choppy mess that would hardly be identifiable as an explosion.</p>
+<p>This is when the magic happens: <em><span style="color:pink">interpolation</span></em></p>
+<p>We can create another flipbook with the data of the motion in that pixel, or in other words: a flipbook storing the changes from one frame to the next. So&hellip; if we have this, we can just interpolate from one frame, to the next one, in the direction stored here, right? ABSOLUTELY!</p>
+<p>Motion vector textures usually only pack data for the X and Y positions. This means that, for a texture, it only occupies two channels, usually the RG channels of a RGB/RGBA texture. This gives it its green-yellowish color.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        srcset="
+        /posts/explosion-fx/motion_vector_hu56ffe59c3e2516facd1a0911aa934bb2_373094_330x0_resize_box_3.png 330w,
+        /posts/explosion-fx/motion_vector_hu56ffe59c3e2516facd1a0911aa934bb2_373094_660x0_resize_box_3.png 660w,
+        /posts/explosion-fx/motion_vector_hu56ffe59c3e2516facd1a0911aa934bb2_373094_1024x0_resize_box_3.png 1024w,
+        /posts/explosion-fx/motion_vector_hu56ffe59c3e2516facd1a0911aa934bb2_373094_1320x0_resize_box_3.png 2x"
+        src="/posts/explosion-fx/motion_vector_hu56ffe59c3e2516facd1a0911aa934bb2_373094_660x0_resize_box_3.png"
+        alt="Flipbook motion vector"
+      />
+      
+      
+    </figure>
+  
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><em>Motion vector example</em></td>
+</tr>
+</tbody>
+</table>
+<p>For the same explosion:</p>
+<table>
+<thead>
+<tr>
+<th>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        srcset="
+        /posts/explosion-fx/flipbook_big_hubcd44e7fd2a851b064e115d16dbcc42f_341710_330x0_resize_box_3.png 330w,
+        /posts/explosion-fx/flipbook_big_hubcd44e7fd2a851b064e115d16dbcc42f_341710_660x0_resize_box_3.png 660w,
+        /posts/explosion-fx/flipbook_big_hubcd44e7fd2a851b064e115d16dbcc42f_341710_1024x0_resize_box_3.png 1024w,
+        /posts/explosion-fx/flipbook_big_hubcd44e7fd2a851b064e115d16dbcc42f_341710_1320x0_resize_box_3.png 2x"
+        src="/posts/explosion-fx/flipbook_big_hubcd44e7fd2a851b064e115d16dbcc42f_341710_660x0_resize_box_3.png"
+        alt="Flipbook big"
+      />
+      
+      
+    </figure>
+  
+
+</th>
+<th>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        srcset="
+        /posts/explosion-fx/flipbook_small_hu13c533a22f68da3a78330d4370e85004_316712_330x0_resize_box_3.png 330w,
+        /posts/explosion-fx/flipbook_small_hu13c533a22f68da3a78330d4370e85004_316712_660x0_resize_box_3.png 660w,
+        /posts/explosion-fx/flipbook_small_hu13c533a22f68da3a78330d4370e85004_316712_1024x0_resize_box_3.png 1024w,
+        /posts/explosion-fx/flipbook_small_hu13c533a22f68da3a78330d4370e85004_316712_1320x0_resize_box_3.png 2x"
+        src="/posts/explosion-fx/flipbook_small_hu13c533a22f68da3a78330d4370e85004_316712_660x0_resize_box_3.png"
+        alt="Flipbook small"
+      />
+      
+      
+    </figure>
+  
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><center><em>Frames without motion-based vectors</em></center></td>
+<td><center><em>Frames with motion-based vectors</em></center></td>
+</tr>
+</tbody>
+</table>
+<p>Using motion-based vectors we managed to go down from a 11x11 grid holding data for 121 frames, to a 6x6 grid with only 64 frames. This means close to double the resolution per frame.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        srcset="
+        /posts/explosion-fx/flipbook_diff_interp_hu132dd3764f1b6fd520602c96167c34ff_21816743_330x0_resize_box_1.gif 330w,
+        /posts/explosion-fx/flipbook_diff_interp_hu132dd3764f1b6fd520602c96167c34ff_21816743_660x0_resize_box_1.gif 660w,
+        /posts/explosion-fx/flipbook_diff_interp_hu132dd3764f1b6fd520602c96167c34ff_21816743_1024x0_resize_box_1.gif 1024w,
+        /posts/explosion-fx/flipbook_diff_interp_hu132dd3764f1b6fd520602c96167c34ff_21816743_1320x0_resize_box_1.gif 2x"
+        src="/posts/explosion-fx/flipbook_diff_interp_hu132dd3764f1b6fd520602c96167c34ff_21816743_660x0_resize_box_1.gif"
+        alt="Flipbook diff interp"
+      />
+      
+      
+    </figure>
+  
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><em>Ingame view of 120 linear vs 64 interpolated</em></td>
+</tr>
+</tbody>
+</table>
+<p>You might notice that 64 frames also looks darker. This leads us to the next section!</p>
+<div id="baked-lighting-for-flipbooks-tlrb-textures" class="anchor"></div>
+<h3 class="relative group">Baked lighting for flipbooks: TLRB textures 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#baked-lighting-for-flipbooks-tlrb-textures" aria-label="Anchor">#</a></span>        
+    
+</h3>
+<p>By definition, a flipbook by itself would be impossible to lit correctly in a game scene, as after all it&rsquo;s only a plane with some color applied, and there isn&rsquo;t any volumetric smoke or simulation to lit.</p>
+<p>To combat this, we introduce lighting maps. Lighting maps are just the same frames we had before, but with baked lighting data in it, rendered in the simulation software. For this, we render each frame once with a directional light pointing at it from different directions. This can be an infinite number of directions, but for performance purposes, I&rsquo;m keeping it at 4 directions, as those are the channels we typycally use in a texture (R,G,B,A).</p>
+<p>The original post by <em>Mederic</em> at VFX forums uses lights positioned at the <em>top, left, right and bottom</em> of the simulation volume. JangaFX, makers of the Embergen real-time simulation software also followed the same formula. So we&rsquo;re not gonna be less. For commodity purposes, we&rsquo;re gonna call this the <em>TLRB</em> texture from now on, according to the respective position of each direction in the texture. This is also how it&rsquo;s called inside Embergen.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        srcset="
+        /posts/explosion-fx/TLRB_hu3b293f354b0015dbc97c832ed5380cdb_374724_330x0_resize_box_3.png 330w,
+        /posts/explosion-fx/TLRB_hu3b293f354b0015dbc97c832ed5380cdb_374724_660x0_resize_box_3.png 660w,
+        /posts/explosion-fx/TLRB_hu3b293f354b0015dbc97c832ed5380cdb_374724_1024x0_resize_box_3.png 1024w,
+        /posts/explosion-fx/TLRB_hu3b293f354b0015dbc97c832ed5380cdb_374724_1320x0_resize_box_3.png 2x"
+        src="/posts/explosion-fx/TLRB_hu3b293f354b0015dbc97c832ed5380cdb_374724_660x0_resize_box_3.png"
+        alt="Flipbook tlrb"
+      />
+      
+      
+    </figure>
+  
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><em>Example of a TLRB texture</em></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><center><em>Top</em></center></th>
+<th><center><em>Left</em></center></th>
+<th><center><em>Right</em></center></th>
+<th><center><em>Bottom</em></center></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        srcset="
+        /posts/explosion-fx/TLRB_R_huf7958f241475ae777859a9b4f97e5acf_192969_330x0_resize_box_3.png 330w,
+        /posts/explosion-fx/TLRB_R_huf7958f241475ae777859a9b4f97e5acf_192969_660x0_resize_box_3.png 660w,
+        /posts/explosion-fx/TLRB_R_huf7958f241475ae777859a9b4f97e5acf_192969_1024x0_resize_box_3.png 1024w,
+        /posts/explosion-fx/TLRB_R_huf7958f241475ae777859a9b4f97e5acf_192969_1320x0_resize_box_3.png 2x"
+        src="/posts/explosion-fx/TLRB_R_huf7958f241475ae777859a9b4f97e5acf_192969_660x0_resize_box_3.png"
+        alt="Flipbook tlrb r channel"
+      />
+      
+      
+    </figure>
+  
+
+</td>
+<td>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        srcset="
+        /posts/explosion-fx/TLRB_G_huc50f6b870f548d6b38de16b88458e5b0_188940_330x0_resize_box_3.png 330w,
+        /posts/explosion-fx/TLRB_G_huc50f6b870f548d6b38de16b88458e5b0_188940_660x0_resize_box_3.png 660w,
+        /posts/explosion-fx/TLRB_G_huc50f6b870f548d6b38de16b88458e5b0_188940_1024x0_resize_box_3.png 1024w,
+        /posts/explosion-fx/TLRB_G_huc50f6b870f548d6b38de16b88458e5b0_188940_1320x0_resize_box_3.png 2x"
+        src="/posts/explosion-fx/TLRB_G_huc50f6b870f548d6b38de16b88458e5b0_188940_660x0_resize_box_3.png"
+        alt="Flipbook tlrb r channel"
+      />
+      
+      
+    </figure>
+  
+
+</td>
+<td>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        srcset="
+        /posts/explosion-fx/TLRB_B_hu16828ccb3798006d96f7b7045762d739_186437_330x0_resize_box_3.png 330w,
+        /posts/explosion-fx/TLRB_B_hu16828ccb3798006d96f7b7045762d739_186437_660x0_resize_box_3.png 660w,
+        /posts/explosion-fx/TLRB_B_hu16828ccb3798006d96f7b7045762d739_186437_1024x0_resize_box_3.png 1024w,
+        /posts/explosion-fx/TLRB_B_hu16828ccb3798006d96f7b7045762d739_186437_1320x0_resize_box_3.png 2x"
+        src="/posts/explosion-fx/TLRB_B_hu16828ccb3798006d96f7b7045762d739_186437_660x0_resize_box_3.png"
+        alt="Flipbook tlrb r channel"
+      />
+      
+      
+    </figure>
+  
+
+</td>
+<td>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        srcset="
+        /posts/explosion-fx/TLRB_A_hu2fdf313838be1f460d67293daddaf543_143358_330x0_resize_box_3.png 330w,
+        /posts/explosion-fx/TLRB_A_hu2fdf313838be1f460d67293daddaf543_143358_660x0_resize_box_3.png 660w,
+        /posts/explosion-fx/TLRB_A_hu2fdf313838be1f460d67293daddaf543_143358_1024x0_resize_box_3.png 1024w,
+        /posts/explosion-fx/TLRB_A_hu2fdf313838be1f460d67293daddaf543_143358_1320x0_resize_box_3.png 2x"
+        src="/posts/explosion-fx/TLRB_A_hu2fdf313838be1f460d67293daddaf543_143358_660x0_resize_box_3.png"
+        alt="Flipbook tlrb r channel"
+      />
+      
+      
+    </figure>
+  
+
+</td>
+</tr>
+<tr>
+<td><center><em>Red channel</em></center></td>
+<td><center><em>Green channel</em></center></td>
+<td><center><em>Blue channel</em></center></td>
+<td><center><em>Alpha channel</em></center></td>
+</tr>
+</tbody>
+</table>
+<div id="emissive-data" class="anchor"></div>
+<h3 class="relative group">Emissive data 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#emissive-data" aria-label="Anchor">#</a></span>        
+    
+</h3>
+<p>In order to achieve a better customization of our flipbook inside the game engine, it&rsquo;s better to not cache any data that isn&rsquo;t of the same type, or similar, together. This means that, for the explosion used as an example in this post, we want to differentiate between the explosion itself and the smoke it generates. This opens our way to change different parameters of the explosion once cached and in the game engine.</p>
+<p>We can apply a blackbody based color ramp to this to give it any temperature inside the game engine. This gives us control of its color and intensity based on real-world properties, as well as the ability to change its hue, if we want to change its color from a natural one to a fantasy one (for example, if we want to represent magic).</p>
+<table>
+<thead>
+<tr>
+<th>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        srcset="
+        /posts/explosion-fx/blackbody_huc083dcf0984cbf32c51f39adc2d78d0f_64211_330x0_resize_q75_box.jpg 330w,
+        /posts/explosion-fx/blackbody_huc083dcf0984cbf32c51f39adc2d78d0f_64211_660x0_resize_q75_box.jpg 660w,
+        /posts/explosion-fx/blackbody_huc083dcf0984cbf32c51f39adc2d78d0f_64211_1024x0_resize_q75_box.jpg 1024w,
+        /posts/explosion-fx/blackbody_huc083dcf0984cbf32c51f39adc2d78d0f_64211_1320x0_resize_q75_box.jpg 2x"
+        src="/posts/explosion-fx/blackbody_huc083dcf0984cbf32c51f39adc2d78d0f_64211_660x0_resize_q75_box.jpg"
+        alt="Blackbody Blender"
+      />
+      
+      
+    </figure>
+  
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        srcset="
+        /posts/explosion-fx/blackbody_ramp_hu6a6a44fdeadad051a0aad71e36b2242c_4902_330x0_resize_box_3.png 330w,
+        /posts/explosion-fx/blackbody_ramp_hu6a6a44fdeadad051a0aad71e36b2242c_4902_660x0_resize_box_3.png 660w,
+        /posts/explosion-fx/blackbody_ramp_hu6a6a44fdeadad051a0aad71e36b2242c_4902_1024x0_resize_box_3.png 1024w,
+        /posts/explosion-fx/blackbody_ramp_hu6a6a44fdeadad051a0aad71e36b2242c_4902_1320x0_resize_box_3.png 2x"
+        src="/posts/explosion-fx/blackbody_ramp_hu6a6a44fdeadad051a0aad71e36b2242c_4902_660x0_resize_box_3.png"
+        alt="Blackbody Wikipedia ramp"
+      />
+      
+      
+    </figure>
+  
+
+</td>
+</tr>
+<tr>
+<td><center><em>Blackbody radiation ramps courtesy of Blender and Wikipedia</em></center></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        srcset="
+        /posts/explosion-fx/hue_changed_huc730720de048cea0bebc25600291940a_9648404_330x0_resize_box_1.gif 330w,
+        /posts/explosion-fx/hue_changed_huc730720de048cea0bebc25600291940a_9648404_660x0_resize_box_1.gif 660w,
+        /posts/explosion-fx/hue_changed_huc730720de048cea0bebc25600291940a_9648404_1024x0_resize_box_1.gif 1024w,
+        /posts/explosion-fx/hue_changed_huc730720de048cea0bebc25600291940a_9648404_1320x0_resize_box_1.gif 2x"
+        src="/posts/explosion-fx/hue_changed_huc730720de048cea0bebc25600291940a_9648404_660x0_resize_box_1.gif"
+        alt="Explosion hue changed"
+      />
+      
+      
+    </figure>
+  
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><em>Personalized explosion with different value of temperature and hue</em></td>
+</tr>
+</tbody>
+</table>
+<p>For this, we simply export the emissive data from our simulation. Both Embergen and Houdini support this, being relatively easy to export. More on this later on this post.</p>
+<div id="transparency-data" class="anchor"></div>
+<h3 class="relative group">Transparency data 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#transparency-data" aria-label="Anchor">#</a></span>        
+    
+</h3>
+<p>Flipbook textures usually need more information on what&rsquo;s transparent, and to what extent. This is what makes parts of our smoke see-through where there is less density. For this, we also need to export the transparency data, usually called <em>alpha</em>. For this we only need a single channel, as the texture only holds data for what&rsquo;s visible or not.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        srcset="
+        /posts/explosion-fx/flipbook_alpha_hufaa3618a40b3498c6301491398a111ca_156613_330x0_resize_box_3.png 330w,
+        /posts/explosion-fx/flipbook_alpha_hufaa3618a40b3498c6301491398a111ca_156613_660x0_resize_box_3.png 660w,
+        /posts/explosion-fx/flipbook_alpha_hufaa3618a40b3498c6301491398a111ca_156613_1024x0_resize_box_3.png 1024w,
+        /posts/explosion-fx/flipbook_alpha_hufaa3618a40b3498c6301491398a111ca_156613_1320x0_resize_box_3.png 2x"
+        src="/posts/explosion-fx/flipbook_alpha_hufaa3618a40b3498c6301491398a111ca_156613_660x0_resize_box_3.png"
+        alt="Flipbook alpha"
+      />
+      
+      
+    </figure>
+  
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><em>Alpha channel example</em></td>
+</tr>
+</tbody>
+</table>
+<div id="overview" class="anchor"></div>
+<h3 class="relative group">Overview 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#overview" aria-label="Anchor">#</a></span>        
+    
+</h3>
+<p>So we are aware now of all the parts of our textures. The only part left is assembling them together. Let&rsquo;s see what we have:</p>
+<ul>
+<li>A motion-based vector texture consisting on X and Y movements, occupying the R and G channels.</li>
+<li>A TLRB texture with 4 channels, one for each light.</li>
+<li>A channel for emissives in the simulation.</li>
+<li>A channel for transparency.</li>
+</ul>
+<p>This totals up to 8 channels, or two RGBA textures&hellip; What a coincidence! It&rsquo;s almost as if we had thought of this on purpose.</p>
+<p>We can arrange this in any way we want, but as we&rsquo;re aiming for Unreal Engine, the most useful way of packing it is as follows:</p>
+<p><strong>Texture 1</strong></p>
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R</td>
+<td>Motion Vectors <strong>X</strong></td>
+</tr>
+<tr>
+<td>G</td>
+<td>Motion Vectors <strong>Y</strong></td>
+</tr>
+<tr>
+<td>B</td>
+<td>Emissives</td>
+</tr>
+<tr>
+<td>A</td>
+<td>Transparency/Alpha</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Texture 2 - TLRB texture</strong></p>
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R</td>
+<td><strong>Top</strong> lighting</td>
+</tr>
+<tr>
+<td>G</td>
+<td><strong>Left</strong> lighting</td>
+</tr>
+<tr>
+<td>B</td>
+<td><strong>Right</strong> lighting</td>
+</tr>
+<tr>
+<td>A</td>
+<td><strong>Bottom</strong> lighting</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        srcset="
+        /posts/explosion-fx/Final_Motion_hu51580b07773c485f9b276d07e8cb672c_330705_330x0_resize_box_3.png 330w,
+        /posts/explosion-fx/Final_Motion_hu51580b07773c485f9b276d07e8cb672c_330705_660x0_resize_box_3.png 660w,
+        /posts/explosion-fx/Final_Motion_hu51580b07773c485f9b276d07e8cb672c_330705_1024x0_resize_box_3.png 1024w,
+        /posts/explosion-fx/Final_Motion_hu51580b07773c485f9b276d07e8cb672c_330705_1320x0_resize_box_3.png 2x"
+        src="/posts/explosion-fx/Final_Motion_hu51580b07773c485f9b276d07e8cb672c_330705_660x0_resize_box_3.png"
+        alt="Flipbook final t1"
+      />
+      
+      
+    </figure>
+  
+
+</th>
+<th>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        srcset="
+        /posts/explosion-fx/Final_TLRB_hu13b4f3ac483ee937db3ba4f530fd704e_230924_330x0_resize_box_3.png 330w,
+        /posts/explosion-fx/Final_TLRB_hu13b4f3ac483ee937db3ba4f530fd704e_230924_660x0_resize_box_3.png 660w,
+        /posts/explosion-fx/Final_TLRB_hu13b4f3ac483ee937db3ba4f530fd704e_230924_1024x0_resize_box_3.png 1024w,
+        /posts/explosion-fx/Final_TLRB_hu13b4f3ac483ee937db3ba4f530fd704e_230924_1320x0_resize_box_3.png 2x"
+        src="/posts/explosion-fx/Final_TLRB_hu13b4f3ac483ee937db3ba4f530fd704e_230924_660x0_resize_box_3.png"
+        alt="Flipbook final t2"
+      />
+      
+      
+    </figure>
+  
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><center><em>Example Texture 1</em></center></td>
+<td><center><em>Example Texture 2</em></center></td>
+</tr>
+</tbody>
+</table>
+<div id="exporting-this-data" class="anchor"></div>
+<h2 class="relative group">Exporting this data 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#exporting-this-data" aria-label="Anchor">#</a></span>        
+    
+</h2>
+<p>I will go through how to create these textures in the most commonly used fluid simulation software for game development at the moment - Embergen and Houdini. We will start with Embergen as the incredible, beautiful, godly, sigma team at JangaFX has prepared a tremendously easy way to export this kind of textures. Houdini is not too hard either, it&rsquo;s just rougher to work with, but SideFX has also prepared some things for this kind of exports.</p>
+<div id="embergen" class="anchor"></div>
+<h3 class="relative group">Embergen 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#embergen" aria-label="Anchor">#</a></span>        
+    
+</h3>
+<p>Both of the textures presented are supported natively by Embergen. However, we do have to modify it to an extent in order to only use two textures.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        srcset="
+        /posts/explosion-fx/embergen_export_hu71369aa48144d3944fb3cee64827a3bb_53606_330x0_resize_box_3.png 330w,
+        /posts/explosion-fx/embergen_export_hu71369aa48144d3944fb3cee64827a3bb_53606_660x0_resize_box_3.png 660w,
+        /posts/explosion-fx/embergen_export_hu71369aa48144d3944fb3cee64827a3bb_53606_1024x0_resize_box_3.png 1024w,
+        /posts/explosion-fx/embergen_export_hu71369aa48144d3944fb3cee64827a3bb_53606_1320x0_resize_box_3.png 2x"
+        src="/posts/explosion-fx/embergen_export_hu71369aa48144d3944fb3cee64827a3bb_53606_660x0_resize_box_3.png"
+        alt="Explosion hue changed"
+      />
+      
+      
+    </figure>
+  
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><em>Embergen export settings to achieve Texture1 and Texture 2 presented in this post</em></td>
+</tr>
+</tbody>
+</table>
+
+  
+
+
+
+<div
+  
+    class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900"
+  >
+
+  <span
+    
+      class="text-primary-400 ltr:pr-3 rtl:pl-3 flex items-center"
+    >
+
+    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg>
+
+  </span>
+
+
+  </span>
+
+  <span
+    
+      class="dark:text-neutral-300"
+    ><p>As of Embergen v1.0.5 (August, 2023), Embergen has a bug with how their TLR capture lays the data on the channels, as they&rsquo;ve accidentally flipped Top and Right, making it RLT instead of TLR. The image above fixes this by flipping them back, shown in Six Point 1 (TLR).</p>
+<p>It is possible that this might be fixed when you&rsquo;re following this post. Do not blindly follow the above image before checking.</p>
+<p>You can check the state of this issue by checking the channels first or at <a href="https://discord.com/channels/274382782627840002/1096854623467343975"   target="_blank">
+    their Discord bug tracker</a>.</p>
+</span>
+</div>
+
+<p>Embergen will create an output file for each capture. This is not a big problem, as we can just ignore them. I suggest naming them first to know which output files are the ones you want once exported.</p>
+<div id="houdini" class="anchor"></div>
+<h3 class="relative group">Houdini 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#houdini" aria-label="Anchor">#</a></span>        
+    
+</h3>
+<p>Although we can create a relatively complex setup to achieve this, SideFX has us covered with their Labs node <a href="https://sidefxlabs.artstation.com/projects/o2AX8k"   target="_blank">
+    <em>Labs Flipbook Textures</em></a>.</p>
+<p>Houdini calls this MDC (Multidirectional Contributions), but it is the exact same procedure. It does have some differences in their implementation though, which will lead to a slightly different result when we&rsquo;re rendering using this method. We will also explore some ways to avoid this.</p>
+<p>This node renders the explosion using the viewport, so you don&rsquo;t need to setup any renderers like Mantra or similar. It does need a <em>pyrobakevolume</em> node on our volume setup in our /obj/ network. So first of all, we need to make sure that we have one ready.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        srcset="
+        /posts/explosion-fx/pyro_bake_volume_hu6f525c698fb0b0f180cb2b5e5f4ff1a7_40855_330x0_resize_box_3.png 330w,
+        /posts/explosion-fx/pyro_bake_volume_hu6f525c698fb0b0f180cb2b5e5f4ff1a7_40855_660x0_resize_box_3.png 660w,
+        /posts/explosion-fx/pyro_bake_volume_hu6f525c698fb0b0f180cb2b5e5f4ff1a7_40855_1024x0_resize_box_3.png 1024w,
+        /posts/explosion-fx/pyro_bake_volume_hu6f525c698fb0b0f180cb2b5e5f4ff1a7_40855_1320x0_resize_box_3.png 2x"
+        src="/posts/explosion-fx/pyro_bake_volume_hu6f525c698fb0b0f180cb2b5e5f4ff1a7_40855_660x0_resize_box_3.png"
+        alt="Pyro bake voulme"
+      />
+      
+      
+    </figure>
+  
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><em>An example explosion setup with a Pyro Bake Volume node ready</em></td>
+</tr>
+</tbody>
+</table>
+<p>Once ready, back in our /out/ network, we can deploy a <em>Labs Flipbook Textures</em> node and set it up accordingly. We will only need to render some passes, so even if you can choose to render what you want, I find it easier to just remove what we&rsquo;re not using from the setup. We also need to change how the node is compositing our textures.</p>
+<table>
+<thead>
+<tr>
+<th>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        srcset="
+        /posts/explosion-fx/houdini_labs_main_setup_hu81bcc71a9e56aab5d1b339e02fe3b50a_71747_330x0_resize_box_3.png 330w,
+        /posts/explosion-fx/houdini_labs_main_setup_hu81bcc71a9e56aab5d1b339e02fe3b50a_71747_660x0_resize_box_3.png 660w,
+        /posts/explosion-fx/houdini_labs_main_setup_hu81bcc71a9e56aab5d1b339e02fe3b50a_71747_1024x0_resize_box_3.png 1024w,
+        /posts/explosion-fx/houdini_labs_main_setup_hu81bcc71a9e56aab5d1b339e02fe3b50a_71747_1320x0_resize_box_3.png 2x"
+        src="/posts/explosion-fx/houdini_labs_main_setup_hu81bcc71a9e56aab5d1b339e02fe3b50a_71747_660x0_resize_box_3.png"
+        alt="Labs main setup"
+      />
+      
+      
+    </figure>
+  
+
+</th>
+<th>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        srcset="
+        /posts/explosion-fx/houdini_labs_export_setup_hu5af06bcefa5cd49e8d641b0e614443bb_63423_330x0_resize_box_3.png 330w,
+        /posts/explosion-fx/houdini_labs_export_setup_hu5af06bcefa5cd49e8d641b0e614443bb_63423_660x0_resize_box_3.png 660w,
+        /posts/explosion-fx/houdini_labs_export_setup_hu5af06bcefa5cd49e8d641b0e614443bb_63423_1024x0_resize_box_3.png 1024w,
+        /posts/explosion-fx/houdini_labs_export_setup_hu5af06bcefa5cd49e8d641b0e614443bb_63423_1320x0_resize_box_3.png 2x"
+        src="/posts/explosion-fx/houdini_labs_export_setup_hu5af06bcefa5cd49e8d641b0e614443bb_63423_660x0_resize_box_3.png"
+        alt="Labs export setup"
+      />
+      
+      
+    </figure>
+  
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><center><em>Main setup</em></center></td>
+<td><center><em>Export setup</em></center></td>
+</tr>
+</tbody>
+</table>
+<p>Using the default MDC has a slight problem though: Houdini doesn&rsquo;t lay their lights how we&rsquo;re expecting. Their method has been designed to contain more lights, so their lights are setup in different direction, going around the volume in small increments. This means that our lights will all be slightly moved, as there are no lights in a purely top/left/right/bottom direction, which might be noticeable ingame if we&rsquo;re using Embergen generated flipbooks along with Houdini. Even if we aren&rsquo;t, the results won&rsquo;t be as consistent as they could be, as the lighting in the volume won&rsquo;t be 100% accurate. We can still use this and it will look alright inside Unreal, as it will interpolate between the other lights and not be very noticeable, but we will fix this editing the <em>Labs Flipbook</em> Node by right clicking on it and pressing <em>Allow editing of contents in locked node</em>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        srcset="
+        /posts/explosion-fx/labs_allow_edit_hubc5a5c8c3aa2511db535b171f167224b_22298_330x0_resize_box_3.png 330w,
+        /posts/explosion-fx/labs_allow_edit_hubc5a5c8c3aa2511db535b171f167224b_22298_660x0_resize_box_3.png 660w,
+        /posts/explosion-fx/labs_allow_edit_hubc5a5c8c3aa2511db535b171f167224b_22298_1024x0_resize_box_3.png 1024w,
+        /posts/explosion-fx/labs_allow_edit_hubc5a5c8c3aa2511db535b171f167224b_22298_1320x0_resize_box_3.png 2x"
+        src="/posts/explosion-fx/labs_allow_edit_hubc5a5c8c3aa2511db535b171f167224b_22298_660x0_resize_box_3.png"
+        alt="Labs allow edit"
+      />
+      
+      
+    </figure>
+  
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><center><em>Allow editing of contents in locked node</em></center></td>
+</tr>
+</tbody>
+</table>
+<p>Once unlocked, we will be able to get into the node. What we are going to do is basically changing the light directions in order to achieve the result we want. This will allow us to render the textures easily and have only one material back in Unreal for Embergen or Houdini generated textures.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        srcset="
+        /posts/explosion-fx/labs_inside_hu2ba911fa3e31ffba754fd915bff1ff97_59145_330x0_resize_box_3.png 330w,
+        /posts/explosion-fx/labs_inside_hu2ba911fa3e31ffba754fd915bff1ff97_59145_660x0_resize_box_3.png 660w,
+        /posts/explosion-fx/labs_inside_hu2ba911fa3e31ffba754fd915bff1ff97_59145_1024x0_resize_box_3.png 1024w,
+        /posts/explosion-fx/labs_inside_hu2ba911fa3e31ffba754fd915bff1ff97_59145_1320x0_resize_box_3.png 2x"
+        src="/posts/explosion-fx/labs_inside_hu2ba911fa3e31ffba754fd915bff1ff97_59145_660x0_resize_box_3.png"
+        alt="Labs inside"
+      />
+      
+      
+    </figure>
+  
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><center><em>Inside the Texture Flipbook Labs node</em></center></td>
+</tr>
+</tbody>
+</table>
+<p>What we want to edit is inside the Object Networks <em>mdc_a</em> and <em>mdc_b</em>. The settings should go as follows:</p>
+<table>
+<thead>
+<tr>
+<th>network</th>
+<th>name</th>
+<th>x rot</th>
+<th>y rot</th>
+<th>z rot</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mdc_a</td>
+<td>mdc0 (red)</td>
+<td>-90</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>mdc_a</td>
+<td>mdc1 (green)</td>
+<td>0</td>
+<td>-90</td>
+<td>0</td>
+</tr>
+<tr>
+<td>mdc_a</td>
+<td>mdc2 (blue)</td>
+<td>0</td>
+<td>90</td>
+<td>0</td>
+</tr>
+<tr>
+<td>&ndash;</td>
+<td>&ndash;</td>
+<td>&ndash;</td>
+<td>&ndash;</td>
+<td>&ndash;</td>
+</tr>
+<tr>
+<td>mdc_b</td>
+<td>mdc0 (red)</td>
+<td>90</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>The directions in the table are set accordingly to the TLRB paradigm we&rsquo;ve set through this post. Red is top, green is left, etc. The red light in <em>mdc_b</em> will end up in the alpha channel of the final texture.</p>
+<p>All lights should be parented with the camera, as it comes by default. Keep the color as it is. Remove the spare light in <em>mdc_b</em> and keep only the red one.</p>
+<table>
+<thead>
+<tr>
+<th>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        srcset="
+        /posts/explosion-fx/mdc_a_hue125b53dd267eeb3ea21f990f2ebf2a8_19955_330x0_resize_box_3.png 330w,
+        /posts/explosion-fx/mdc_a_hue125b53dd267eeb3ea21f990f2ebf2a8_19955_660x0_resize_box_3.png 660w,
+        /posts/explosion-fx/mdc_a_hue125b53dd267eeb3ea21f990f2ebf2a8_19955_1024x0_resize_box_3.png 1024w,
+        /posts/explosion-fx/mdc_a_hue125b53dd267eeb3ea21f990f2ebf2a8_19955_1320x0_resize_box_3.png 2x"
+        src="/posts/explosion-fx/mdc_a_hue125b53dd267eeb3ea21f990f2ebf2a8_19955_660x0_resize_box_3.png"
+        alt="Labs mdc_a"
+      />
+      
+      
+    </figure>
+  
+
+</th>
+<th>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        srcset="
+        /posts/explosion-fx/mdc_b_huc460fdc8f59ac641bacdd383e5846d1e_11612_330x0_resize_box_3.png 330w,
+        /posts/explosion-fx/mdc_b_huc460fdc8f59ac641bacdd383e5846d1e_11612_660x0_resize_box_3.png 660w,
+        /posts/explosion-fx/mdc_b_huc460fdc8f59ac641bacdd383e5846d1e_11612_1024x0_resize_box_3.png 1024w,
+        /posts/explosion-fx/mdc_b_huc460fdc8f59ac641bacdd383e5846d1e_11612_1320x0_resize_box_3.png 2x"
+        src="/posts/explosion-fx/mdc_b_huc460fdc8f59ac641bacdd383e5846d1e_11612_660x0_resize_box_3.png"
+        alt="Labs mdc_b"
+      />
+      
+      
+    </figure>
+  
+
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><center><em>mdc_a</em></center></td>
+<td><center><em>mdc_b</em></center></td>
+</tr>
+</tbody>
+</table>
+<p>Now we can press <em>Render</em> in our <em>Labs Texture Flipbook</em> node, wait for the render and then export the textures from the export tab in the <em>Labs Texture Flipbook</em> node settings.</p>
+<div id="using-this-inside-unreal-engine-5" class="anchor"></div>
+<h2 class="relative group">Using this inside Unreal Engine 5 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#using-this-inside-unreal-engine-5" aria-label="Anchor">#</a></span>        
+    
+</h2>
+<p>There is an infinite number of ways of dealing with this inside Unreal, but there are a few keypoints:</p>
+<ul>
+<li>Using 4 light points, you need to estimate the result for the front and back lighting yourself.</li>
+<li>For motion vectors, the easiest way of dealing with motion vectors is by using Unreal Engine&rsquo;s <em>Flipbook Motion Vectors</em> node. You can try implementing it yourself but this works great.</li>
+<li>You&rsquo;ll need to estimate where the light is in relation to the flipbook render.</li>
+</ul>
+<p>Completely explaining how to do this inside Unreal would take ages and it wouldn&rsquo;t be as easy to understand as seeing it yourself, so here is a material that takes into account the textures we&rsquo;ve just created. You can navigate it freely from here. You can copy and paste this into a material inside Unreal, as if it was the Unreal editor, and it will work without problems. I suggest that you check it out on fullscreen or at <a href="https://blueprintue.com/blueprint/jy42s0mu/"   target="_blank">
+    blueprintUE</a>, where you will also be able to copy it easily.</p>
+<iframe style="width:120%; height:600px;overflow:auto;" src="https://blueprintue.com/render/jy42s0mu/" scrolling="no" allowfullscreen></iframe>
+<p>This material will react to the directional light set in the scene by lighting up the flipbook render according to the baked lights rendered in Embergen/Houdini. It will also interpolate between the frames using the motion based texture we created.</p>
+<div id="overview-1" class="anchor"></div>
+<h2 class="relative group">Overview 
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#overview-1" aria-label="Anchor">#</a></span>        
+    
+</h2>
+<p>Feel free to drop a comment down below if you need any assistance or just want to say hi! I really hope this helped you. I&rsquo;ve tried it to keep the performance and memory overhead to the bare minimum, but this technique has infinite ways of implementing it, depending on your necessities. The good thing about this is that we can achieve greater levels of detail in the flipbook by assigning more pixels per frame, as well as having the adequate parameters to reuse the explosion if needed. This is useful for fire simulations, for example, as they can be reused as smoke sprites or clouds without the need of having another flipbook explicitly created just for it.</p>
+
+        </br></br>
+        
+
+      </div>
+      <script>
+        var oid = "views_posts\\Explosion FX\\index.md"
+        var oid_likes = "likes_posts\\Explosion FX\\index.md"
+      </script>
+      
+      
+      <script type="text/javascript" src="/js/page.min.0e49973b4ad0a382c7c6012d8bff8226316642daabc4f8a20477bd08674f3da6e2fa993bc20ad4f51e7c5bb68e6f913a207a7c4fe37ea0e7b806894afce0a64e.js" integrity="sha512-DkmXO0rQo4LHxgEti/&#43;CJjFmQtqrxPiiBHe9CGdPPabi&#43;pk7wgrU9R58W7aOb5E6IHp8T&#43;N&#43;oOe4BolK/OCmTg=="></script>
+  </section>
+  <footer class="pt-8 max-w-prose print:hidden">
+
+    
+
+
+    
+    
+    
+
+    
+      
+    
+
+    
+
+    
+
+    
+  
+
+
+    
+    
+    <div class="pt-3">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="pt-3">
+        
+
+
+
+<div id="graphcomment"></div>
+<script type="text/javascript">
+
+   
+
+  var __semio__params = {
+    graphcommentId: "LoronsoDev", 
+
+    behaviour: {
+      
+      
+      telemetricThroughCmp: true
+    },
+
+    
+
+  }
+
+   
+
+  function __semio__onload() {
+    __semio__gc_graphlogin(__semio__params)
+  }
+
+
+  (function() {
+    var gc = document.createElement('script'); gc.type = 'text/javascript'; gc.async = true;
+    gc.onload = __semio__onload; gc.defer = true; gc.src = 'https://integration.graphcomment.com/gc_graphlogin.js?' + Date.now();
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gc);
+  })();
+  
+
+</script>
+      </div>
+    </div>
+    
+    
+  </footer>
+</article>
+
+      <div class="pointer-events-none absolute top-[100vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top" title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+    </main><footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+
+    
+    
+    <p class="text-sm text-neutral-500 dark:text-neutral-400">
+      &copy;
+      2023
+      Lorenzo HS
+    </p>
+    
+
+    
+    
+    <p class="text-xs text-neutral-500 dark:text-neutral-400">
+      
+      
+      Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+        href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+        href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+    </p>
+    
+
+  </div>
+  <script>
+    
+    mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+      margin: 24,
+      background: 'rgba(0,0,0,0.5)',
+      scrollOffset: 0,
+    })
+    
+  </script>
+  
+  
+  <script type="text/javascript" src="/js/process.min.2166d3adac1679c00a75161830ab5725d3efc0e3d3f8c2453fb01d0907948436c25f0f8a7ad824322fa22f3f9c85fd4d0a1d5c856f53b862157da25a57dc3d52.js" integrity="sha512-IWbTrawWecAKdRYYMKtXJdPvwOPT&#43;MJFP7AdCQeUhDbCXw&#43;KetgkMi&#43;iLz&#43;chf1NCh1chW9TuGIVfaJaV9w9Ug=="></script>
+  
+  
+</footer><div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="https://loronsodev.github.io"
+  style="z-index:500"
+>
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+  </div>
+</body>
+
+</html>
