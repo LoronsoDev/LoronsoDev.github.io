@@ -43,8 +43,9 @@ For the same explosion:
 |---|---|
 | <center>*Frames without motion-based vectors*</center> | <center>*Frames with motion-based vectors*</center> |
 
-Using motion-based vectors we managed to go down from a 11x11 grid holding data for 121 frames, to a 6x6 grid with only 64 frames. This means close to double the resolution per frame.
+Using motion-based vectors we managed to go down from a 11x11 grid holding data for 121 frames, to a 6x6 grid with only 32 frames. This means close to double the resolution per frame.
 
+For another flipbook with 64 frames, we can see an example of the result here:
 | ![Flipbook diff interp](flipbook_diff_interp.gif) |
 |:--:|
 | *Ingame view of 120 linear vs 64 interpolated*|
