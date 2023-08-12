@@ -21,6 +21,11 @@
   weight = 11
 
 [[main]]
+name = "Resume"
+url = "LorenzoHerran_CV.pdf"
+weight = 12
+
+[[main]]
   identifier = "mail"
   pre = "email"
   url = "mailto: lorenzohs98@gmail.com"
