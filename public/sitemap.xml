@@ -141,5 +141,13 @@
     
   
     
+      <url>
+            <loc>https://loronsodev.github.io/resume/</loc>
+            <changefreq>daily</changefreq>
+            <priority>0.5</priority>
+          </url>
+    
+  
+    
   
 </urlset>

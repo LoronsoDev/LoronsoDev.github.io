@@ -22,7 +22,7 @@
 
 [[main]]
 name = "Resume"
-url = "LorenzoHerran_CV.pdf"
+pageRef = "resume"
 weight = 12
 
 [[main]]
